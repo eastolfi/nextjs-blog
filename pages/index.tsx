@@ -1,3 +1,4 @@
+import { Fragment } from 'react';
 import { GetStaticProps } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -39,9 +40,9 @@ export default function Home({ allPostsData }: HomeProps) {
                 <h2 className={utilStyles.headingLg}>Blog</h2>
                 <ul className={utilStyles.list}>
                     {allPostsData.map(({ id, date, title }, i) => (
-                        <>
-                            <li className={utilStyles.listItem} key={id}>
-                                <Link href={ `posts/${id}` }>
+                        <Fragment key={id}>
+                            <li className={utilStyles.listItem}>
+                                <Link href={ `/posts/${id}` }>
                                     <a>{title}</a>
                                 </Link>
 
@@ -54,7 +55,7 @@ export default function Home({ allPostsData }: HomeProps) {
                             </li>
                             {/* Divider */}
                             { i < allPostsData.length - 1 ? <li><hr /></li> : '' }
-                        </>
+                        </Fragment>
                     ))}
                 </ul>
             </section>
