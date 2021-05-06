@@ -1,25 +1,26 @@
 {
-  "name": "learn-starter",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev -p 4000",
-    "build": "next build",
-    "start": "next start -p 4000"
-  },
-  "dependencies": {
-    "@eaweb/react.ui.forms.file-dropzone": "0.0.2",
-    "date-fns": "^2.21.2",
-    "gray-matter": "^4.0.3",
-    "next": "^10.0.0",
-    "react": "17.0.1",
-    "react-dom": "17.0.1",
-    "remark": "^13.0.0",
-    "remark-html": "^13.0.1",
-    "sass": "^1.32.12"
-  },
-  "devDependencies": {
-    "@types/react": "^17.0.4",
-    "typescript": "^4.2.4"
-  }
+    "name": "learn-starter",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "preinstall": "npm config set @bit:registry https://node.bit.dev && npm config set @eaweb:registry https://node.bit.dev",
+        "dev": "next dev -p 4000",
+        "build": "next build",
+        "start": "next start -p 4000"
+    },
+    "dependencies": {
+        "@eaweb/react.ui.forms.file-dropzone": "1.0.0",
+        "date-fns": "^2.21.2",
+        "gray-matter": "^4.0.3",
+        "next": "^10.0.0",
+        "react": "17.0.1",
+        "react-dom": "17.0.1",
+        "remark": "^13.0.0",
+        "remark-html": "^13.0.1",
+        "sass": "^1.32.12"
+    },
+    "devDependencies": {
+        "@types/react": "^17.0.4",
+        "typescript": "^4.2.4"
+    }
 }
